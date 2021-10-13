@@ -6,14 +6,13 @@
 header {
   padding: 0;
   width: auto;
-  height: 80px;
-  background: #A04D4D;
+  height: 80px; /*5D7BA6*/
+  background: #571C1E;
+  z-index: 100;
+  transition: 0.3s top;
 }
 a {
   text-decoration: none;
-}
-p {
-    margin: 30px 0;
 }
 .menu_rigth {
   list-style-type: none;
@@ -38,6 +37,15 @@ p {
 }
 .menu_rigth li:hover {
   border-bottom: 5px solid #FFFFFF;
+}
+.header-fixed {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  left: 0;
+}
+.header_is_show {
+  top: 0;
 }
 ul {
   padding: 0;
@@ -69,7 +77,7 @@ ul {
 }
 .home_page > .inner {
   width: 1000px;
-  padding: 50px 0;
+  padding: 90px 0;
   font-family: sans-serif;
   font-size: 2em;
   letter-spacing: 0.5px;
@@ -93,12 +101,11 @@ ul {
   font-size: 1em;
   margin: 50px 0;
 }
-
 .organizator:hover {
   border-bottom: 5px solid #FFFFFF;
 }
 .date {
-  padding: 0;
+  padding: 50px;
   margin: 0;
   font-weight: bold;
   font-size: 1.5em;
@@ -121,7 +128,7 @@ ul {
   font-size: 1em;
   margin: 10px auto;
 }
-.post {
+.post, .phone, .email {
   letter-spacing: 1px;
   margin: 10px auto;
 }
@@ -136,9 +143,9 @@ ul {
 }
 .programm_committee {
   width: auto;
-  height: 600px;
+  height: 700px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
 }
 .organizing_committee {
   background-color: #A04D4D;
@@ -146,7 +153,7 @@ ul {
   height: 600px;
   text-align: center;
   color: #FFFFFF;
-  margin: 0 auto;
+  margin: 0;
 }
 .head {
   font-weight: bold;
@@ -154,7 +161,7 @@ ul {
   font-size: 3em;
   letter-spacing: 0.5px;
   text-align: center;
-  margin: 50px auto;
+  padding: 50px 0;
 }
 .slider {
   max-width: 1320px;
@@ -173,14 +180,94 @@ ul {
   max-width: 300px;
   padding: 0 50px;
 }
-.prev,
-.next {
+.progr_comm_next,
+.progr_comm_prev,
+.org_comm_prev,
+.org_comm_next,
+.loc_next,
+.loc_prev {
   position: relative;
-  padding: 200px 0;
   height: 60px;
   width: 60px;
   cursor: pointer;
 }
-.next {
+.org_comm_next,
+.progr_comm_next,
+.loc_next {
   right: 0;
+}
+.seminar_programm {
+  width: auto;
+  height: 400px;
+}
+.seminar_programm > .inner {
+  width: 1000px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto;
+}
+.location {
+  background-color: #574e4e;
+  width: auto;
+  height: 1150px;
+  color: #FFFFFF;
+}
+.location > .inner {
+  width: 1000px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto;
+}
+.loc {
+  margin: 50px auto;
+  max-width: 1200px;
+}
+.dubki {
+  width: 300px;
+  height: 200px;
+}
+.location > .inner > .description {
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.registration_fee {
+  background-color: #A04D4D;
+  width: auto;
+  height: 400px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+.registration_fee > .inner {
+  width: 1000px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto;
+}
+.contacts {
+  height: 650px;
+}
+.cont {
+  max-width: 800px;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.cont_ {
+  max-width: 300px;
+  padding: 0 50px;
 }
