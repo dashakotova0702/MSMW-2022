@@ -11,19 +11,19 @@
 <body>
   <header = class "header">
       <nav>
-          <a href = "#home_page"><object class = "home" type="image/svg+xml" data="home.svg"></object></a>
+          <a href = "#home_page" class = "anchor"><img class = "home anchor" src="home.svg"></object></a>
           <ul class = "menu_rigth">
-            <li class = "nav"><a href = "#contacts">КОНТАКТЫ</a></li>
-            <li class = "nav"><a href = "#registration_fee">РЕГИСТРАЦИОННЫЙ ВЗНОС</a></li>
-            <li class = "nav"><a href = "#location">МЕСТО ПРОВЕДЕНИЯ</a></li>
-            <li class = "nav"><a href = "#seminar_programm">ПРОГРАММА СЕМИНАРА</a></li>
-            <li class = "nav"><a href = "#organizing_committee">ОРГАНИЗАЦИОННЫЙ КОМИТЕТ</a></li>
-            <li class = "nav"><a href = "#programm_committee">ПРОГРАММНЫЙ КОМИТЕТ</a></li>
+            <li class = "nav"><a href = "#contacts" class = "anchor">КОНТАКТЫ</a></li>
+            <li class = "nav"><a href = "#registration_fee" class = "anchor">РЕГИСТРАЦИОННЫЙ ВЗНОС</a></li>
+            <li class = "nav"><a href = "#location" class = "anchor">МЕСТО ПРОВЕДЕНИЯ</a></li>
+            <li class = "nav"><a href = "#seminar_programm" class = "anchor">ПРОГРАММА СЕМИНАРА</a></li>
+            <li class = "nav"><a href = "#organizing_committee" class = "anchor">ОРГАНИЗАЦИОННЫЙ КОМИТЕТ</a></li>
+            <li class = "nav"><a href = "#programm_committee" class = "anchor">ПРОГРАММНЫЙ КОМИТЕТ</a></li>
           </ul>
       </nav>
   </header>
   <div class="main">
-    <div class = "name">
+    <div id = "home_page" class = "name">
       <div class = "inner">XII ВСЕРОССИЙСКИЙ СЕМИНАР ПО РАДИОФИЗИКЕ МИЛЛИМЕТРОВЫХ И СУБМИЛЛИМЕТРОВЫХ ВОЛН</div>
     </div>
     <div class = "home_page" style = "background-color: #A04D4D; height: 600px;">
@@ -46,7 +46,7 @@
           <p class = "description">Число приглашенных обзорных докладов по перспективным направлениям исследований ограничено. Остальные доклады будут представлены в виде устных сообщений. Ориентировочное время для сообщения - 20 минут (включая дискуссию).</p>
       </div></div>
     </div>
-    <div class = "programm_committee">
+    <div id = "programm_committee" class = "programm_committee">
       <p class = "head">ПРОГРАММНЫЙ КОМИТЕТ</p>
       <div class = "slider">
         <img src="left.svg" class="progr_comm_prev" style = "padding: 200px 0;">
@@ -147,7 +147,7 @@
         <img src="right.svg" class="progr_comm_next" style = "padding: 200px 0;">
       </div>
     </div>
-    <div class = "organizing_committee">
+    <div id = "organizing_committee" class = "organizing_committee">
       <p class = "head">ОРГАНИЗАЦИОННЫЙ КОМИТЕТ</p>
       <div class = "slider">
         <img src="left_w.svg" class="org_comm_prev" style = "padding: 150px 0;">
@@ -179,14 +179,14 @@
         <img src="right_w.svg" class="org_comm_next" style = "padding: 150px 0;">
       </div>
     </div>
-    <div class = "seminar_programm">
+    <div id = "seminar_programm" class = "seminar_programm">
       <p class = "head">ПРОГРАММА СЕМИНАРА</p>
       <div class = "inner">
         <p class = "bold">Программа семинара появится позднее</p>
       </div>
     </div>
-    <div class = "location">
-      <p class = "head">Место проведения</p>
+    <div id = "location" class = "location">
+      <p class = "head">МЕСТО ПРОВЕДЕНИЯ</p>
       <div class = "inner">
         <p>Ориентировочно место проведения семинара -</p>
         <p>ЗАГОРОДНЫЙ ФИТНЕС-ОТЕЛЬ «ДУБКИ» (КАТЕГОРИЯ 3***)</p>
@@ -218,13 +218,13 @@
         <p class = "bold" style = "color: #FFFFFF;">В СВЯЗИ С ЭПИДЕМИОЛОГИЧЕСКОЙ СИТУАЦИЕЙ МЕСТО ПРОВЕДЕНИЯ СЕМИНАРА МОЖЕТ БЫТЬ ИЗМЕНЕНО!</p>
       </div>
     </div>
-    <div class = "registration_fee">
+    <div id = "registration_fee" class = "registration_fee">
       <p class = "head">РЕГИСТРАЦИОННЫЙ ВЗНОС</p>
       <div class = "inner">
         <p class = "bold">Информация о регистрационном взносе появится позднее</p>
       </div>
     </div>
-    <div class = "contacts">
+    <div id = "contacts" class = "contacts">
       <p class = "head">КОНТАКТЫ</p>
       <div class = "cont">
         <div class="cont_">
@@ -256,7 +256,7 @@
       prevArrow: '.progr_comm_prev',
       nextArrow: '.progr_comm_next'
     });
-    $('.org_comm').slick({
+  $('.org_comm').slick({
       infinite: true,
       dots: false,
       slidesToShow: 3,
@@ -264,7 +264,7 @@
       prevArrow: '.org_comm_prev',
       nextArrow: '.org_comm_next'
     });
-    $('.loc').slick({
+  $('.loc').slick({
       centerMode: true,
       centerPadding: '100px',
       slidesToShow: 3,
@@ -292,9 +292,6 @@
           }
         }
       ]
-    });
-    $('.#contacts').click(function(event) {
-      $('.wrap').scrollTop(3000);
     });
   </script>
 </body>
