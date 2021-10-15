@@ -9,24 +9,31 @@
   <title>XII Всероссийский семинар по радиофизике миллиметровых и субмиллиметровых волн</title>
 </head>
 <body>
-  <header = class "header">
-      <nav>
-          <a href = "#home_page" class = "anchor"><img class = "home anchor" src="home.svg"></object></a>
-          <ul class = "menu_rigth">
-            <li class = "nav"><a href = "#contacts" class = "anchor">КОНТАКТЫ</a></li>
-            <li class = "nav"><a href = "#registration_fee" class = "anchor">РЕГИСТРАЦИОННЫЙ ВЗНОС</a></li>
-            <li class = "nav"><a href = "#location" class = "anchor">МЕСТО ПРОВЕДЕНИЯ</a></li>
-            <li class = "nav"><a href = "#seminar_programm" class = "anchor">ПРОГРАММА СЕМИНАРА</a></li>
-            <li class = "nav"><a href = "#organizing_committee" class = "anchor">ОРГАНИЗАЦИОННЫЙ КОМИТЕТ</a></li>
-            <li class = "nav"><a href = "#programm_committee" class = "anchor">ПРОГРАММНЫЙ КОМИТЕТ</a></li>
-          </ul>
-      </nav>
+  <header class = "header">
+    <div class = "container">
+      <div class = "header_body">
+        <a href = "#home_page" class = "anchor home"><img class = "home anchor" src="home.svg"></object></a>
+        <div class = "header_burger">
+          <span></span>
+        </div>
+        <nav class = "header_menu">
+            <ul class = "header_list">
+              <li><a href = "#programm_committee" class = "anchor">ПРОГРАММНЫЙ КОМИТЕТ</a></li>
+              <li><a href = "#organizing_committee" class = "anchor">ОРГАНИЗАЦИОННЫЙ КОМИТЕТ</a></li>
+              <li><a href = "#seminar_programm" class = "anchor">ПРОГРАММА СЕМИНАРА</a></li>
+              <li><a href = "#location" class = "anchor">МЕСТО ПРОВЕДЕНИЯ</a></li>
+              <li><a href = "#registration_fee" class = "anchor">РЕГИСТРАЦИОННЫЙ ВЗНОС</a></li>
+              <li><a href = "#contacts" class = "anchor">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <div class="main">
     <div id = "home_page" class = "name">
       <div class = "inner">XII ВСЕРОССИЙСКИЙ СЕМИНАР ПО РАДИОФИЗИКЕ МИЛЛИМЕТРОВЫХ И СУБМИЛЛИМЕТРОВЫХ ВОЛН</div>
     </div>
-    <div class = "home_page" style = "background-color: #A04D4D; height: 600px;">
+    <div class = "home_page first" style = "background-color: #A04D4D; height: 600px;">
         <div class = "inner">
           <p><a class = "organizator" style = "color: #FFFFFF;" href = "https://ipfran.ru">ИНСТИТУТ ПРИКЛАДНОЙ ФИЗИКИ РАН</a> и <a class = "organizator" style = "color: #FFFFFF;" href = "http://www.gycom.ru/">ЗАО НПП «ГИКОМ»</a></p>
           <object class = "logo" type = "image/svg+xml" data="ipfran.svg"></object>
@@ -34,7 +41,7 @@
           <p>проводят ХII Всероссийский семинар по радиофизике миллиметровых и субмиллиметровых волн</p>
           <p class = "date">С 28 ФЕВРАЛЯ ПО 4 МАРТА 2022 г.</p></div>
     </div>
-    <div class = "home_page" style = "background-color: #574e4e; height: 900px;">
+    <div class = "home_page second" style = "background-color: #574e4e; height: 900px;">
       <div class = "inner">
         <p>На семинаре предполагается заслушать и обсудить результаты новых исследований по генерации, приему и практическому применению излучения миллиметрового и субмиллиметрового диапазонов</p>
         <p class = "bold" style = "color: #FFFFFF;">Работа семинара будет проходить в рамках следующих секций:</p>
@@ -175,6 +182,14 @@
                 <img class = "photo" src = "photos/kotovada.jpg"/>
                 <p class = "surname">Котова Д.А.</p>
               </div>
+            <div class="slider_item">
+                  <img class = "photo" src = "photos/orlovskyiaa.jpg"/>
+                  <p class = "surname">Орловский А.А.</p>
+                </div>
+            <div class="slider_item">
+                  <img class = "photo" src = "photos/kamenkymv.jpg"/>
+                  <p class = "surname">Каменский М.В.</p>
+                </div>
         </div>
         <img src="right_w.svg" class="org_comm_next" style = "padding: 150px 0;">
       </div>
@@ -215,6 +230,9 @@
         <p class = "description">1 кат Стандарт: площадь 19-24 кв.м, кровать двуспальная или две раздельные, доп место-диван-кушетка </p>
         <p class = "description">Джуниор: площадь: 30-35 кв.м.: кровать двуспальная, доп.место: диван двухместный, банные халаты, тапочки, фен </p>
         <p class = "description">Люкс 2-х комн.:50 кв.м. ,кровать двуспальная, диван 2-спальный,  2 ТВ,  банные халаты, тапочки, фен</p>
+        <div class = "map" style = "padding: 30px 80px 0 80px">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1261afeab477659a3392cc01bf9286a418514b228cba09c39768cebfb1b804f6&amp;width=100%&amp;height=564&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
         <p class = "bold" style = "color: #FFFFFF;">В СВЯЗИ С ЭПИДЕМИОЛОГИЧЕСКОЙ СИТУАЦИЕЙ МЕСТО ПРОВЕДЕНИЯ СЕМИНАРА МОЖЕТ БЫТЬ ИЗМЕНЕНО!</p>
       </div>
     </div>
@@ -254,7 +272,16 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow: '.progr_comm_prev',
-      nextArrow: '.progr_comm_next'
+      nextArrow: '.progr_comm_next',
+      responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+      ]
     });
   $('.org_comm').slick({
       infinite: true,
@@ -262,7 +289,18 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow: '.org_comm_prev',
-      nextArrow: '.org_comm_next'
+      nextArrow: '.org_comm_next',
+      responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      }
+      ]
     });
   $('.loc').slick({
       centerMode: true,
@@ -274,21 +312,10 @@
       nextArrow: '.loc_next',
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 1300,
           settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
+            centerPadding: '10px',
+            slidesToShow: 2
           }
         }
       ]

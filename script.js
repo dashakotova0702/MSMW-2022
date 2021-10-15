@@ -1,12 +1,3 @@
-var header = $('header'), cloneHeader = header.clone();
-cloneHeader.addClass('header-fixed');
-header.before(cloneHeader);
-$(window).scroll(function(){
-  if ($(window).scrollTop() > 70) {
-    cloneHeader.addClass('header_is_show');
-  }
-});
-
 document.querySelectorAll('.anchor').forEach(link => {
   link.addEventListener('click', function (e){
     console.log('click')
@@ -20,6 +11,11 @@ document.querySelectorAll('.anchor').forEach(link => {
     window.scrollBy ({
       top: offsetPosition,
       behavior: 'smooth',
-    })
-  })
-})
+    });
+  });
+});
+$(document).ready(function(){
+  $('.header_burger').click(function(event){
+    $('.header_burger, .header_menu').toggleClass('active');
+  });
+});
