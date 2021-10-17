@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.container {
+.header {
+  position: relative;
   max-width: 100%;
   margin: 5px auto;
   padding: 0px 10px;
 }
-.header {
+.container {
   position: fixed;
   padding: 0;
   width: 100%;
@@ -18,9 +19,9 @@
   transition: 0.3s top;
   z-index: 5;
 }
-.header:before {
+.container:before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -35,6 +36,7 @@
 }
 .header_list {
   display: flex;
+  padding: 15px 0 0 0;
 }
 .header_list li {
   list-style: none;
@@ -43,7 +45,7 @@
   text-align: center;
 }
 .header_list li:hover {
-  border-bottom: 5px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 .header_list a {
   text-decoration: none;
@@ -55,7 +57,9 @@
   color: #FFFFFF;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
 }
 .header_burger {
   display: none;
@@ -70,9 +74,8 @@ ul {
   float: left;
 }
 .name {
-  height: 600px;
+  height: auto;
   margin: 0;
-  width: auto;
 }
 .name > .inner {
   width: 1200px;
@@ -87,6 +90,7 @@ ul {
 .home_page {
   margin: 0;
   width: auto;
+  height: auto;
 }
 .home_page > .inner {
   width: 1000px;
@@ -97,6 +101,12 @@ ul {
   text-align: center;
   color: #FFFFFF;
   margin: 0 auto;
+}
+.first {
+  background-color: #A04D4D;
+}
+.second {
+  background-color: #574e4e;
 }
 .list {
   text-align: left;
@@ -109,16 +119,17 @@ ul {
   font-size: 0.75em;
   text-align: justify;
 }
-.organizator, .bold{
+.organizator {
   font-weight: bold;
   font-size: 1em;
-  margin: 50px 0;
 }
-.organizator:hover {
-  border-bottom: 5px solid #FFFFFF;
+.bold {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 50px 0;
 }
 .date {
-  padding: 50px;
+  padding: 50px 0 0 0;
   margin: 0;
   font-weight: bold;
   font-size: 1.5em;
@@ -156,14 +167,14 @@ ul {
 }
 .programm_committee {
   width: auto;
-  height: 700px;
+  height: auto;
   text-align: center;
   margin: 0;
 }
 .organizing_committee {
   background-color: #A04D4D;
   width: auto;
-  height: 600px;
+  height: auto;
   text-align: center;
   color: #FFFFFF;
   margin: 0;
@@ -174,7 +185,7 @@ ul {
   font-size: 3em;
   letter-spacing: 0.5px;
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
 .slider {
   max-width: 1320px;
@@ -185,6 +196,7 @@ ul {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  padding: 50px 0;
 }
 .slider_items {
   max-width: 1200px;
@@ -203,6 +215,7 @@ ul {
   height: 60px;
   width: 60px;
   cursor: pointer;
+  padding: 70px 0;
 }
 .org_comm_next,
 .progr_comm_next,
@@ -211,7 +224,7 @@ ul {
 }
 .seminar_programm {
   width: auto;
-  height: 400px;
+  height: auto;
 }
 .seminar_programm > .inner {
   width: 1000px;
@@ -221,11 +234,12 @@ ul {
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0 auto;
+  padding: 50px 0;
 }
 .location {
   background-color: #574e4e;
   width: auto;
-  height: 1750px;
+  height: auto;
   color: #FFFFFF;
 }
 .location > .inner {
@@ -236,10 +250,20 @@ ul {
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0 auto;
+
+}
+.location > .inner.up {
+    padding: 50px 0 0 0;
+}
+.location > .inner.down {
+    padding: 0 0 50px 0;
+}
+.map {
+  padding: 30px 80px 0 80px
 }
 .loc {
-  margin: 50px auto;
   max-width: 1200px;
+  padding: 0;
 }
 .dubki {
   width: 300px;
@@ -253,7 +277,7 @@ ul {
 .registration_fee {
   background-color: #A04D4D;
   width: auto;
-  height: 400px;
+  height: auto;
   text-align: center;
   color: #FFFFFF;
   margin: 0;
@@ -266,12 +290,13 @@ ul {
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0 auto;
+  padding: 0 0 50px 0;
 }
 .contacts {
-  height: 650px;
+  height: auto;
 }
 .cont {
-  max-width: 800px;
+  max-width: 720px;
   font-family: sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.5px;
@@ -279,23 +304,24 @@ ul {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  padding: 50px 0;
 }
 .cont_ {
   max-width: 300px;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 @media (max-width: 1300px) {
-  .header {
+  .container {
     height: 50px;
   }
-  .header:before {
+  .container:before {
     z-index: 5;
     height: 50px;
   }
   .home {
     width: 30px;
     height: 30px;
-    padding: 3px 10px;
+    padding: 0;
     float: left;
     z-index: 7;
   }
@@ -327,11 +353,11 @@ ul {
   }
   .header_burger:before {
     top: 0;
-    transition: all 0.2s ease 0s;
+    transition: all 0.5s ease 0s;
   }
   .header_burger:after {
     bottom: 0;
-    transition: all 0.2s ease 0s;
+    transition: all 0.5s ease 0s;
   }
   .header_burger > span {
     position: absolute;
@@ -359,6 +385,7 @@ ul {
     display: flex;
     justify-content: none;
     align-items: center;
+    padding: 10px 20px;
   }
   .header_list {
     padding: 60px 0 0 0;
@@ -381,7 +408,7 @@ ul {
   .name > .inner {
     width: 800px;
     font-size: 3em;
-    padding: 110px;
+    padding: 110px 0;
   }
   .second {
     height: 950px;
@@ -412,6 +439,9 @@ ul {
   }
   .map {
     padding: 30px 0 0 0;
+  }
+  .seminar_programm > .inner {
+    width: 800px;
   }
   .registration_fee > .inner {
     width: 800px;
@@ -420,44 +450,160 @@ ul {
 }
 @media (max-width: 800px) {
   .name {
-    height: 400px;
+    height: auto;
   }
   .name > .inner {
-    width: 800px;
-    font-size: 3em;
+    width: 90%;
+    font-size: 2.25em;
+    padding: 110px 0 80px 0;
+  }
+  .home_page {
+    font-size: 0.75em;
+  }
+  .first {
+    height: auto;
   }
   .second {
-    height: 950px;
+    height: auto;
   }
   .home_page > .inner {
-    width: 800px;
-    font-size: 2em;
+    width: 90%;
   }
   .date {
     font-size: 1.2em;
   }
+  .head {
+    font-size: 2.5em;
+  }
   .location {
-    height: 1850px;
+    height: auto;
   }
   .location > .inner {
-    width: 800px;
+    max-width: 90%;
     font-size: 2em;
   }
+  .location > .inner > .description {
+    font-size: 0.7em;
+  }
   .slider {
-    width: 800px;
+    width: 420px;
   }
   .slider_items {
-    width: 680px;
+    width: 300px;
   }
   .slider_item {
     max-width: 300px;
-    padding: 0 20px;
+    padding: 0;
   }
   .map {
     padding: 30px 0 0 0;
   }
   .registration_fee > .inner {
-    width: 800px;
+    width: 90%;
+    font-size: 2em;
+  }
+  .seminar_programm > .inner {
+    width: 90%;
+  }
+  .cont {
+    display: block;
+    width: 300px;
+  }
+  .cont_ {
+    padding: 0 0 30px 0;
+  }
+}
+@media (max-width: 425px) {
+  .name > .inner {
     font-size: 1.5em;
+  }
+  .head {
+    font-size: 2em;
+  }
+  .map {
+    padding: 30px 0 0 0;
+  }
+  .location > .inner.up {
+    font-size: 1.5em;
+  }
+  .location > .inner.down > .bold {
+    font-size: 0.7em;
+    padding: 50px 0 0 0;
+  }
+  .logo {
+    align-content: space-between;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 420px) {
+  .slider {
+    width: 100%;
+  }
+  .progr_comm_next,
+  .progr_comm_prev,
+  .org_comm_prev,
+  .org_comm_next,
+  .loc_next,
+  .loc_prev {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (max-width: 375px) {
+  .name > .inner {
+    font-size: 1.7em;
+  }
+  .slider {
+    width: 280px;
+  }
+  .slider_items {
+    width: 200px;
+  }
+  .slider_item {
+    max-width: 200px;
+    padding: 0;
+  }
+  .loc_next,
+  .loc_prev {
+    padding: 40px 0;
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+  .dubki {
+    width: 200px;
+    height: 133px;
+  }
+  .location > .inner.down > .bold {
+      font-size: 0.7em;
+  }
+  .progr_comm_next,
+  .progr_comm_prev,
+  .org_comm_prev,
+  .org_comm_next,
+  .loc_next,
+  .loc_prev {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .name > .inner {
+    font-size: 1.5em;
+  }
+  .head {
+    font-size: 1.7em;
+  }
+  .registration_fee > .inner {
+    font-size: 1.7em;
+  }
+  .seminar_programm > .inner {
+    font-size: 1.7em;
   }
 }
