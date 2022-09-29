@@ -52,13 +52,13 @@
   font-family: sans-serif;
   font-weight: bold;
   display: inline-block;
-  font-size: 1em;
+  font-size: 0.9em;
   letter-spacing: 0.5px;
   color: #FFFFFF;
 }
 a {
   text-decoration: underline;
-  color: #000;
+  color: #000000;
   cursor: pointer;
 }
 .header_burger {
@@ -128,11 +128,16 @@ ul {
   font-size: 1em;
   padding: 50px 0;
 }
+.bold_key {
+  font-size: 1em;
+  padding: 30px 0;
+  border-bottom: 3px solid #FFFFFF;
+}
 .date {
   padding: 50px 0 0 0;
   margin: 0;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.25em;
   letter-spacing: 0.75px;
 }
 .logo {
@@ -140,6 +145,12 @@ ul {
   width: 150px;
   height: 150px;
   margin: 0 30px;
+}
+.logo_amerit {
+  align-content: center;
+  width: 250px;
+  height: 150px;
+  margin: 0 20px;
 }
 .photo {
   width: 300px;
@@ -179,6 +190,78 @@ ul {
   color: #FFFFFF;
   margin: 0;
 }
+.photos {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 0;
+}
+.key_dates {
+  background-color: #574e4e;
+  width: auto;
+  height: auto;
+  text-align: justify;
+  color: #FFFFFF;
+  margin: 0;
+}
+.key_dates > .inner {
+  width: 1000px;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+table {
+  width: 100%;
+  background: #FFFFFF;
+  color: #000000;
+  border: 0px solid #000000;
+  border-spacing: 0;
+}
+tr {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+td {
+  border: 0px solid #000000;
+  padding: 30px;
+}
+th {
+  border: 0px solid #000000;
+  padding: 30px;
+  font-weight: normal;
+}
+.column_1 {
+  text-align: center;
+  font-weight: bold;
+  background: #D3D3D3;
+  border-bottom: 3px solid #574e4e;
+  border-right: 3px solid #574e4e;
+}
+.column_2 {
+  text-align: justify;
+  border-bottom: 3px solid #574e4e;
+}
+.done_1 {
+  background: #696969;
+}
+.done_2 {
+  background: #A9A9A9;
+}
+.column_3 {
+  text-align: center;
+  font-weight: bold;
+  background: #FFE4E1;
+  border-bottom: 3px solid #A04D4D;
+  border-right: 3px solid #A04D4D;
+}
+.column_4 {
+  text-align: justify;
+  border-bottom: 3px solid #A04D4D;
+  border-right: 3px solid #A04D4D;
+}
 .head {
   font-weight: bold;
   font-family: sans-serif;
@@ -205,10 +288,22 @@ ul {
   max-width: 300px;
   padding: 0 50px;
 }
+.slider_item_ph {
+  max-width: 600px;
+  padding: 0 50px;
+}
 .progr_comm_next,
 .progr_comm_prev,
 .org_comm_prev,
 .org_comm_next,
+.ph_next,
+.ph_prev {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  padding: 200px 0;
+}
 .loc_next,
 .loc_prev {
   position: relative;
@@ -237,10 +332,8 @@ ul {
   padding: 50px 0;
 }
 .location {
-  background-color: #574e4e;
   width: auto;
   height: auto;
-  color: #FFFFFF;
 }
 .location > .inner {
   width: 1000px;
@@ -269,6 +362,10 @@ ul {
   width: 300px;
   height: 200px;
 }
+.phts {
+  width: 680px;
+  height: 460px;
+}
 .location > .inner > .description {
   font-weight: normal;
   margin: 0 auto;
@@ -278,15 +375,22 @@ ul {
   background-color: #A04D4D;
   width: auto;
   height: auto;
-  text-align: center;
   color: #FFFFFF;
   margin: 0;
 }
 .registration_fee > .inner {
   width: 1000px;
   font-family: sans-serif;
-  font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
+}
+.photos > .inner {
+  width: 1350px;
+  font-family: sans-serif;
+  font-size: 1.5em;
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0 auto;
@@ -372,7 +476,7 @@ ul {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: auto;
     background-color: #571C1E;
     transition: all 0.5s ease 0s;
   }
@@ -421,7 +525,7 @@ ul {
     font-size: 1.2em;
   }
   .location {
-    height: 1850px;
+    height: 1950px;
   }
   .location > .inner {
     width: 800px;
@@ -437,6 +541,11 @@ ul {
     max-width: 300px;
     padding: 0 20px;
   }
+  .slider_item_ph {
+    width: 680px;
+    height: 480px;
+    padding: 0 80px 0 0;
+  }
   .map {
     padding: 30px 0 0 0;
   }
@@ -446,6 +555,13 @@ ul {
   .registration_fee > .inner {
     width: 800px;
     font-size: 1.5em;
+  }
+  .photos > .inner {
+    width: 800px;
+    font-size: 1.5em;
+  }
+  .key_dates > .inner {
+    width: 800px;
   }
 }
 @media (max-width: 800px) {
@@ -475,6 +591,13 @@ ul {
   .head {
     font-size: 2.5em;
   }
+  .key_dates > .inner {
+    width: 90%;
+    font-size: 1.25em;
+  }
+  td {
+    padding: 30px;
+  }
   .location {
     height: auto;
   }
@@ -495,14 +618,36 @@ ul {
     max-width: 300px;
     padding: 0;
   }
+  .ph_next,
+  .ph_prev {
+    padding: 145px 0;
+  }
+  .ph_sldr {
+    width: 620px;
+  }
+  .ph {
+    width: 500px;
+  }
+  .slider_item_ph {
+    width: 500px;
+    height: 350px;
+    padding: 0;
+  }
+  .phts {
+    width: 500px;
+    height: 350px;
+  }
   .map {
     padding: 30px 0 0 0;
   }
   .registration_fee > .inner {
     width: 90%;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .seminar_programm > .inner {
+    width: 90%;
+  }
+  .photos > .inner {
     width: 90%;
   }
   .cont {
@@ -523,12 +668,32 @@ ul {
   .map {
     padding: 30px 0 0 0;
   }
+  .key_dates > .inner {
+    width: 90%;
+    font-size: 1em;
+  }
+  table {
+    font-size: 0.8em;
+  }
+  td {
+    padding: 10px;
+  }
+  th {
+    padding: 10px;
+  }
   .location > .inner.up {
+    font-size: 1.5em;
+  }
+  .location > .inner.down{
     font-size: 1.5em;
   }
   .location > .inner.down > .bold {
     font-size: 0.7em;
     padding: 50px 0 0 0;
+  }
+  .registration_fee > .inner {
+    width: 90%;
+    font-size: 1em;
   }
   .logo {
     align-content: space-between;
@@ -536,6 +701,25 @@ ul {
     height: 120px;
     margin: 0;
     padding: 0 10px;
+  }
+  .ph_next,
+  .ph_prev {
+    padding: 60px 0;
+  }
+  .ph_sldr {
+    width: 420px;
+  }
+  .ph {
+    width: 300px;
+  }
+  .slider_item_ph {
+    width: 300px;
+    height: 200px;
+    padding: 0;
+  }
+  .phts {
+    width: 300px;
+    height: 200px;
   }
 }
 @media (max-width: 420px) {
@@ -551,6 +735,15 @@ ul {
     height: 50px;
     width: 50px;
   }
+  .key_dates > .inner {
+    width: 90%;
+    font-size: 0.75em;
+  }
+  .ph_next,
+  .ph_prev {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (max-width: 375px) {
   .name > .inner {
@@ -565,6 +758,10 @@ ul {
   .slider_item {
     max-width: 200px;
     padding: 0;
+  }
+  .key_dates > .inner {
+    width: 90%;
+    font-size: 0.9em;
   }
   .loc_next,
   .loc_prev {
@@ -592,6 +789,27 @@ ul {
     height: 40px;
     width: 40px;
   }
+  .ph_next,
+  .ph_prev {
+    width: 40px;
+    height: 40px;
+    padding: 75px 0;
+  }
+  .ph_sldr {
+    width: 370px;
+  }
+  .ph {
+    width: 290px;
+  }
+  .slider_item_ph {
+    width: 290px;
+    height: 190px;
+    padding: 0;
+  }
+  .phts {
+    width: 290px;
+    height: 190px;
+  }
 }
 @media (max-width: 320px) {
   .name > .inner {
@@ -600,10 +818,30 @@ ul {
   .head {
     font-size: 1.7em;
   }
-  .registration_fee > .inner {
-    font-size: 1.7em;
+  .registration_fee > .inner > table {
+    width: 90%;
+    font-size: 0.75em;
   }
   .seminar_programm > .inner {
     font-size: 1.7em;
+  }
+  .ph_next,
+  .ph_prev {
+    padding: 60px 0;
+  }
+  .ph_sldr {
+    width: 320px;
+  }
+  .ph {
+    width: 240px;
+  }
+  .slider_item_ph {
+    width: 240px;
+    height: 160px;
+    padding: 0;
+  }
+  .phts {
+    width: 240px;
+    height: 160px;
   }
 }
